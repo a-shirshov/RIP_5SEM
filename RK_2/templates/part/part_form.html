@@ -1,0 +1,26 @@
+<div class="mb-3">
+    <label for="partName" class="form-label">Part Name</label>
+    <input type="text" name="name" value="{{ part.name }}" required="required" class="form-control" id="partName" />
+</div>
+
+<div class="mb-3">
+    <label for="partCost" class="form-label">Part Cost</label>
+    <input
+        type="number"
+        min="0"
+        name="cost"
+        value="{{ part.cost }}"
+        required="required"
+        class="form-control"
+        id="partCost"
+    />
+</div>
+
+<div class="mb-3">
+    <label for="manufacturer" class="form-label">Select Manufacturer</label>
+    <select name="manufacturer" class="form-select" aria-label="Default select example" id="manufacturer">
+        {% for manufacturer in manufacturers %}
+        <option value="{{ manufacturer.pk }}">{{ manufacturer.name }}</option>
+        {% endfor %}
+    </select>
+</div>

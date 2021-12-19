@@ -1,0 +1,12 @@
+{% extends 'include/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Update Manufacturer</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <form action="{% url 'update_manufacturer' manufacturer.pk %}" method="POST" class="form">
+        {% csrf_token %} {% include 'manufacturer/manufacturer_form.html' with manufacturer=manufacturer %}
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock content %}

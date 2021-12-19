@@ -1,0 +1,13 @@
+{% load static %}
+
+<div class="card m-3" style="width: 18rem">
+    <img src="{% static 'img/meg.webp' %}" class="card-img-top" alt="..." />
+    <div class="card-body">
+        <h5 class="card-title">{{ manufacturer.name }}</h5>
+        <p class="card-text">
+            Обычный поставщик необходимых деталей
+        </p>
+        <a href="{% url 'delete_manufacturer' manufacturer.pk %}" class="btn btn-danger"> Delete </a>
+        <a href="{% url 'update_manufacturer' manufacturer.pk %}" class="btn btn-primary"> Update </a>
+    </div>
+</div>

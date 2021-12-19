@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="logo" href="{% url 'me' %}">Shirshov</a>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="{% url 'main' %}" class="nav-link">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_part' %}" class="nav-link">All parts</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_part' %}" class="nav-link">Create part</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_manufacturer' %}" class="nav-link">All manufacturers</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_manufacturer' %}" class="nav-link">Create manufacturer</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'report' %}" class="nav-link">Report</a>
+        </li>
+    </ul>
+</nav>

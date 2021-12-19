@@ -1,0 +1,9 @@
+{% extends 'include/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All Manufacturers</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-wrap">
+    {% for manufacturer in manufacturers %} {% include 'manufacturer/manufacturer_card.html' with manufacturer=manufacturer %} {% endfor %}
+</div>
+{% endblock content %}
